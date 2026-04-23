@@ -1,0 +1,534 @@
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial;
+    background: #ffe4ec;
+    text-align: left;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;   /* 👈 sabse important */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;   /* 👈 upar rahega */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.small-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;  /* 👈 ye important */
+}
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login {
+    text-decoration: none;
+    color: black;
+}
+.login:hover {
+    text-decoration: underline;
+}
+.signup {
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.signup:hover {
+    background: #333;
+}
+
+/* MAIN SECTION */
+.main-content {
+    margin-left: 220px;              /* side menu space */
+    padding: 20px;           /* 🔥 text center */
+}
+
+h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-left: -180px;
+}
+
+.subtitle {
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    margin-left: -180px;
+}
+
+
+/* UPLOAD BOX */
+.upload-box {
+    width: 500px;
+    margin: 30px auto;
+    border: 2px dashed #ccc;
+    padding: 60px;
+    background: plum;
+    border-radius: 10px;
+    text-align: center;
+    transform: translateX(-110px);
+}
+
+.upload-btn {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drag {
+    color: gray;
+    margin-top: 10px;
+}
+.login-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00c6ff, #7b2ff7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+.login-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+}
+
+.forgot {
+    display: block;
+    margin: 10px 0;
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00c6ff, #7b2ff7);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.preview-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.preview-box {
+    text-align: center;
+}
+
+.preview-img {
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+.download-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #28a745, #218838);
+    box-shadow: 0 6px 0 #1e7e34, 0 8px 15px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+    margin: 20px auto;
+}
+
+/* Hover animation */
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #1e7e34, 0 12px 20px rgba(0,0,0,0.4);
+}
+
+/* Click effect (3D press) */
+.download-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #1e7e34, 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== RESULT SIDE BY SIDE ===== */
+
+.result-container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:40px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.result-box{
+    text-align:center;
+}
+
+.result-box img{
+    max-width:420px;
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.result-title{
+    font-weight:bold;
+    margin-bottom:10px;
+    font-size:18px;
+}
+.compare-img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.compare-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.compare-item {
+    text-align: center;
+}
+.compare-img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.features {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+    transform: translateX(-120px);
+}
+.card .arrow {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT 🔥 */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card:hover .arrow {
+    transform: translateX(5px);
+    color: red;
+}
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card {
+    width: 250px;
+}
+
+.card-content {
+    padding-top: 10px;
+}
+.card-img {
+    transition: 0.4s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+/* LOADER BACKGROUND */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+/* SPINNER */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ccc;
+    border-top: 6px solid #0d6efd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* TEXT */
+.loader-container p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ANIMATION */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* MENU BUTTON */
+.menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 15px;  /* 👈 logo ko push karega */
+}
+
+/* SIDE MENU */
+.side-menu {
+    position: fixed;
+    top: 60px;   /* 👈 yaha change */
+    left: 0;
+    width: 220px;
+    height: calc(100% - 60px);  /* 👈 yaha change */
+    background: #ef8eef;
+    padding-top: 20px;
+    transition: 0.4s;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.side-menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
+.side-menu a.active {
+    background: rgba(255,255,255,0.3);
+    font-weight: bold;
+    border-left: 4px solid white;
+}
+.side-menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.side-menu a.active {
+    background: white;
+    color: #ef8eef;
+    font-weight: bold;
+    border-radius: 10px;
+}
+/* HEADING */
+.pdf-heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* CARD CONTAINER */
+.pdf-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.pdf-card {
+    width: 220px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* HOVER ANIMATION 🔥 */
+.pdf-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.pdf-card h2 {
+    margin-bottom: 10px;
+}
+
+.pdf-card p {
+    color: gray;
+}
+.pdf-img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+/* hover pe image zoom 🔥 */
+.pdf-card:hover .pdf-img {
+    transform: scale(1.1);
+}
+.pdf-card{
+    overflow: hidden;
+    border-radius: 15px;
+}
+.pdf-page {
+    background: linear-gradient(to right, #ff4d4d, #ff1a1a)
+}
+.card-content {
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+}
+.featuress {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    transform: translateX(30px);
+}
+.merge-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.merge-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.merge-container p {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* Upload area */
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Big Red Button 🔥 */
+.big-upload-btn {
+    background: linear-gradient(to right, #ff3b3b, #ff6a6a);
+    color: white;
+    font-size: 20px;
+    padding: 20px 60px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.big-upload-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255,0,0,0.3);
+}
+
+/* Drop text */
+.drop-text {
+    margin-top: 15px;
+    color: gray;
+}
+.upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #007bff;
+    background: #f0f8ff;
+}
+
+.file-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
