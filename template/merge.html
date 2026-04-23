@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="mergeForm">
+
+<div class="merge-container">
+
+    <h1>Merge PDF files</h1>
+    <p>Combine PDFs in the order you want</p>
+
+    <!-- BIG BUTTON -->
+    <label class="big-upload-btn">
+        Select PDF files
+        <input type="file" id="pdfInput" name="pdfs" multiple hidden>
+    </label>
+
+    <!-- BOX -->
+    <div class="upload-box" id="dropArea">
+        <p>Drag & Drop PDF files here</p>
+        <p>Selected files 👇</p>
+
+        <div id="fileList"></div>
+    </div>
+
+    <button id="addMoreBtn" style="display: none;">+ ADD more</button>
+
+    <!-- ✅ MERGE BUTTON -->
+    <button type="submit" id="mergeBtn" style="display: none;">
+    Merge PDFs
+</button>
+
+</div>
+
+</form>
+
+<script src="/static/script.js"></script>
+{% endblock %}

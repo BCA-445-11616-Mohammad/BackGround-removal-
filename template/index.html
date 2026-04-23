@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <h1>Free Image Background Remover</h1>
+
+    <p class="subtitle">
+        Instantly remove background from any image using AI.<br>
+        No watermark • Free download • No sign-up required
+    </p>
+
+
+    <div class="upload-box">
+
+        <form action="/remove" method="post" enctype="multipart/form-data">
+
+            <input type="file" name="image" id="file" required>
+
+            <br><br>
+
+            <button class="upload-btn">Upload Image</button>
+
+        </form>
+{% if input_image and output_image %}
+
+<h3 style="text-align:center;margin-top:20px;">Before / After Comparison</h3>
+
+<div class="compare-box">
+
+    <div class="compare-item">
+        <h4>Original</h4>
+        <img src="/static/{{ input_image }}" class="compare-img">
+    </div>
+
+    <div class="compare-item">
+        <h4>Background Removed</h4>
+        <img src="/static/{{ output_image }}" class="compare-img">
+    </div>
+
+</div>
+
+<a href="/static/{{ output_image }}" download class="download-btn">
+    Download Result
+</a>
+
+{% endif %}
+<p class="drag">or drop photos here</p>
+
+    </div>
+    <div class="features">
+
+    <div class="card">
+        <img src="/static/fast.jpeg" class="card-img">
+    <div class="card-content">
+        <h3>Fast Processing</h3>
+        <p>Remove background instantly using AI technology.</p>
+        <span class="arrow">→</span>
+    </div>
+    </div> 
+
+    <div class="card">
+        <img src="/static/quality.jpeg" class="card-img">
+     <div class="card-content">
+         <h3>High Quality</h3>
+         <p>Get clean edges and professional output.</p>
+         <span class="arrow">→</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/static/easy.jpeg" class="card-img">
+    <div class="card-content">
+<h3>Easy Download</h3>
+        <p>Download your image in one click.</p>
+        <span class="arrow">→</span>
+    </div>
+        
+    </div>
+
+</div>
+{% endblock %}
