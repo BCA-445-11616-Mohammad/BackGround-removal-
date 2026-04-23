@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR (HAR PAGE PE SAME) -->
+<div class="navbar">
+    
+    <div class="nav-left">
+        <span class="logo">🅱️</span>
+        <span class="brand">BG Remover</span>
+    </div>
+
+    <div class="nav-right">
+        {% if username %}
+            Welcome, <b>{{ username }}</b>
+            <a href="/logout" class="btn">Logout</a>
+        {% else %}
+            <a href="/login" class="btn">Log in</a>
+            <a href="/register" class="btn signup">Sign up</a>
+        {% endif %}
+    </div>
+
+</div>
+<div id="sideMenu" class="side-menu">
+    <a href="/">BG Removal🏠</a>
+    <a href="/dashboard">Dashboard📊</a>
+    <a href="/pdf">Pdf Tools📄</a>
+    <a href="/contact">Contact📞</a>
+</div>
+<!-- 📦 PAGE CONTENT -->
+<div class="main-content">
+    {% block content %}{% endblock %}
+</div>
+<div class="side-menu">
+    <a href="/" class="{% if active=='home' %}active{% endif %}">🏠 Home</a>
+    <a href="/dashboard" class="{% if active=='dashboard' %}active{% endif %}">📊 Dashboard</a>
+    <a href="/pdf" class="{% if active=='pdf' %}active{% endif %}">📄 PDF Tools</a>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
